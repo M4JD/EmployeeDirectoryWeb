@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import { getEmployees } from './services/EmployeeService';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    getEmployees()
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
